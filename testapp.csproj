@@ -194,9 +194,7 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0</VSToolsPath>
-	
-	
-	<Title>testapp</Title>
+    <Title>testapp</Title>
     <Description>test app everything</Description>
     <Version>0.1</Version>
     <ReleaseNotes>Package</ReleaseNotes>
@@ -204,7 +202,7 @@
     <Owners>Sanal</Owners>
     <Copyright>my copyrights</Copyright>
     <PackageOutputPath>bin\Package</PackageOutputPath>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -236,8 +234,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets'))" />
+    <Error Condition="!Exists('packages\OctoPack.3.6.4\build\OctoPack.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\OctoPack.3.6.4\build\OctoPack.targets'))" />
   </Target>
   <Import Project="packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets" Condition="Exists('packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets')" />
+  <Import Project="packages\OctoPack.3.6.4\build\OctoPack.targets" Condition="Exists('packages\OctoPack.3.6.4\build\OctoPack.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
