@@ -194,6 +194,16 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0</VSToolsPath>
+	
+	
+	<Title>testapp</Title>
+    <Description>test app everything</Description>
+    <Version>0.1</Version>
+    <ReleaseNotes>Package</ReleaseNotes>
+    <Authors>Sanal</Authors>
+    <Owners>Sanal</Owners>
+    <Copyright>my copyrights</Copyright>
+    <PackageOutputPath>bin\Package</PackageOutputPath>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
