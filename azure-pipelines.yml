@@ -29,3 +29,14 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'azurelabsconn'
+    appType: 'webApp'
+    WebAppName: 'azlappservice1'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'azurelabs-rg'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)'
